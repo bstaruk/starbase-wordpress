@@ -1,4 +1,4 @@
-# Starbase - An _s Variant.. with Gulp!
+# Starbase - a sassy _spinoff.. with gulp!
 
 ### Installation
 1. Clone project into your wp-content/themes directory

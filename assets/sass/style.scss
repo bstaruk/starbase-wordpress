@@ -1,16 +1,16 @@
 /*--------------------------------------------------------------
+# CSS Reset by meyerweb.com & Bower-managed Libraries
+--------------------------------------------------------------*/
+@import "reset";
+@import "libs";
+
+/*--------------------------------------------------------------
 # Site Variables, Mixins, Functions & Fonts
 --------------------------------------------------------------*/
-@import "variables/libs";
 @import "variables/colors";
 @import "variables/typography";
 @import "variables/structure";
 @import "variables/mixins";
-
-/*--------------------------------------------------------------
-# CSS Reset by meyerweb.com
---------------------------------------------------------------*/
-@import "reset";
 
 /*--------------------------------------------------------------
 # Primary Layouts
