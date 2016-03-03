@@ -1,5 +1,7 @@
 # Starbase - a sassy _spinoff.. with gulp!
 
+Starbase is a WordPress starter theme, based on [_s](http://underscores.me) and extended to support NPM, Bower, Sass and Gulp.
+
 ### Installation
 1. Clone project into your wp-content/themes directory
 2. Run `npm install` and `bower install` to get dependencies
