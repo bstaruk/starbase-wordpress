@@ -12,4 +12,4 @@ Starbase is built to be served up through Browsersync during development. This a
 You can use `gulp build` with Starbase to force a one-time build of the theme scripts and styles. This task will also perform the heavier lifting that would otherwise bog down the serve task, such as copying over fonts from bower components.
 
 ### Bloaty Extras
-Starbase comes with JQuery and FontAwesome installed to demonstrate how bower and gulp are used to manage assets.
+Starbase comes with [JQuery](https://jquery.com), [Bourbon](http://bourbon.io) and [FontAwesome](http://fontawesome.io) installed to demonstrate how bower and gulp are used to manage assets.
