@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  minifyCSS = require('gulp-minify-css'),
+  cleanCSS = require('gulp-clean-css'),
   watch = require('gulp-watch'),
   uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
@@ -78,7 +78,7 @@ gulp.task('build-css', ['build-sass'], function () {
   return gulp.src([
       'assets/sass/.tmp/style.css'
     ])
-    .pipe(minifyCSS())
+    .pipe(cleanCSS())
     .pipe(concat('style.min.css'))
     .pipe(gulp.dest('dist'))
     .pipe(reload({stream: true}));
