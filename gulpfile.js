@@ -9,6 +9,7 @@ var gulp = require('gulp'),
   stylish = require('jshint-stylish'),
   concat = require('gulp-concat'),
   rename = require('gulp-rename'),
+  del = require('del'),
   reload = browserSync.reload;
 
 
@@ -60,11 +61,14 @@ gulp.task('build-sass', function () {
 
 
 // Fonts
-gulp.task('build-fonts', function () {
+gulp.task('build-fonts', ['clean-fonts'], function () {
   return gulp.src([
       'bower_components/Font-Awesome/fonts/**/*'
     ])
     .pipe(gulp.dest('fonts'));
+});
+gulp.task('clean-fonts', function () {
+  return del(['fonts/**/*']);
 });
 
 
