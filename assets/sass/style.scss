@@ -7,10 +7,12 @@
 /*--------------------------------------------------------------
 # Site Variables, Mixins, Functions & Fonts
 --------------------------------------------------------------*/
+@import "variables/dimensions";
+@import "variables/functions";
+@import "variables/mixins";
 @import "variables/colors";
 @import "variables/typography";
 @import "variables/structure";
-@import "variables/mixins";
 
 /*--------------------------------------------------------------
 # Primary Layouts
