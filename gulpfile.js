@@ -26,8 +26,6 @@ var onError = function (err) {
 // when any of them change (hence the watch calls in it)
 gulp.task('serve', ['build-css', 'build-js'], function () {
   browserSync.init({
-    // change 'playground' to whatever your local Nginx/Apache vhost is set
-    // most commonly 'http://localhost/' or 'http://127.0.0.1/'
     // See http://www.browsersync.io/docs/options/ for more information
     proxy: config.dev.url
   });
