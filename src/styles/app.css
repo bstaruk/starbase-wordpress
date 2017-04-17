@@ -9,16 +9,28 @@ body {
   margin: 0;
 }
 
+.screen-reader-text {
+  display: none;
+}
+
 a {
   color: var(--anchor-font-color);
   transition: color 0.3s ease;
 }
 
-input, button {
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
+
+input, button, select {
   font-family: var(--font-sans);
 }
 
 #page {
+  @media (--medium) {
+    margin-bottom: 2em;
+  }
+
   &:after {
     visibility: hidden;
     display: block;
@@ -26,8 +38,5 @@ input, button {
     content: " ";
     clear: both;
     height: 0;
-  }
-  @media (--medium) {
-    margin-bottom: 2em;
   }
 }
