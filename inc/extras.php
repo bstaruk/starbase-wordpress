@@ -29,7 +29,7 @@ function starbase_body_classes( $classes ) {
 add_filter( 'body_class', 'starbase_body_classes' );
 
 /**
- * Add a pingback url auto-discovery header for singularly identifiable articles.
+ * Add a pingback url auto-discovery masthead for singularly identifiable articles.
  */
 function starbase_pingback_header() {
 	if ( is_singular() && pings_open() ) {

@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme
+ * The masthead for our theme
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-    <header class="header">
+    <header id="masthead">
         <img src="<?php _e(get_template_directory_uri()); ?>/images/starbase.png" alt="starbase" />
         <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
         <?php

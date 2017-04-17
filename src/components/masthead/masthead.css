@@ -1,6 +1,6 @@
 @import '../../styles/variables.css';
 
-.header {
+#masthead {
   font-family: var(--font-serif);
   & img {
     float: left;
