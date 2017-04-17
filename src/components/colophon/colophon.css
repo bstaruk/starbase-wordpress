@@ -1,6 +1,7 @@
 @import '../../styles/variables.css';
 
-.footer {
-  font-size: .8em;
+#colophon {
+  font-style: italic;
+  font-size: .9em;
   color: #888;
 }
