@@ -104,6 +104,15 @@ function starbase_scripts() {
 add_action( 'wp_enqueue_scripts', 'starbase_scripts' );
 
 /**
+ * Make sure jquery does not load
+ * Starbase uses ES6 & Babel, see readme.md for more info
+ */
+if (!is_admin()) add_action("wp_enqueue_scripts", "starbase_remove_jquery", 11);
+function starbase_remove_jquery() {
+    wp_deregister_script('jquery');
+}
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
