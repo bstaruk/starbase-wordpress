@@ -72,18 +72,6 @@ endif;
 add_action( 'after_setup_theme', 'starbase_setup' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function starbase_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'starbase_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'starbase_content_width', 0 );
-
-/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -107,20 +95,13 @@ add_action( 'widgets_init', 'starbase_widgets_init' );
 function starbase_scripts() {
 	wp_enqueue_style( 'starbase-style', get_template_directory_uri() . '/assets/app.bundle.css' );
 
-	wp_enqueue_script( 'starbase-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'starbase-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'starbase-js', get_template_directory_uri() . '/assets/app.bundle.js', array(), '20170420', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'starbase_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -131,13 +112,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
