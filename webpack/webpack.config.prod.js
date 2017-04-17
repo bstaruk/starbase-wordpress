@@ -1,7 +1,6 @@
 const webpackMerge = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = function() {
@@ -47,8 +46,7 @@ module.exports = function() {
       ]
     },
     plugins: [
-      new ExtractTextPlugin('[name].bundle.css'),
-      new CleanWebpackPlugin(['assets'])
+      new ExtractTextPlugin('[name].bundle.css')
     ]
   })
 };
