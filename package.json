@@ -1,6 +1,6 @@
 {
   "name": "starbase",
-  "version": "0.0.4",
+  "version": "2.0.0",
   "author": "Brian Staruk <brian@staruk.me>",
   "contributors": [
     {
@@ -10,13 +10,13 @@
     }
   ],
   "description": "a webpack 2 boilerplate w/ babel (es6), eslint, postcss, cssnext & more",
-  "homepage": "https://github.com/bstaruk/starbase",
+  "homepage": "https://github.com/bstaruk/wordpress-starbase",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bstaruk/starbase.git"
+    "url": "https://github.com/bstaruk/wordpress-starbase.git"
   },
   "bugs": {
-    "url": "https://github.com/bstaruk/starbase/issues",
+    "url": "https://github.com/bstaruk/wordpress-starbase/issues",
     "email": "brian@staruk.me"
   },
   "engines": {
@@ -24,8 +24,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p --config ./webpack/webpack.config.prod.js",
-    "watch": "webpack-dev-server --config ./webpack/webpack.config.dev.js"
+    "start": "webpack -p --config ./webpack/webpack.config.prod.js"
   },
   "keywords": [],
   "license": "MIT",

@@ -105,7 +105,7 @@ add_action( 'widgets_init', 'starbase_widgets_init' );
  * Enqueue scripts and styles.
  */
 function starbase_scripts() {
-	wp_enqueue_style( 'starbase-style', get_template_directory_uri() . '/dist/assets/app.bundle.css' );
+	wp_enqueue_style( 'starbase-style', get_template_directory_uri() . '/assets/app.bundle.css' );
 
 	wp_enqueue_script( 'starbase-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

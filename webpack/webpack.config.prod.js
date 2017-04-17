@@ -1,12 +1,8 @@
 const webpackMerge = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
-const paths = {
-  'static': path.resolve(__dirname, '../src/static')
-};
 
 module.exports = function() {
   return webpackMerge(webpackConfigBase(), {
@@ -52,14 +48,7 @@ module.exports = function() {
     },
     plugins: [
       new ExtractTextPlugin('[name].bundle.css'),
-      new CopyWebpackPlugin([
-        {
-          context: paths.static,
-          to: '../',
-          from: '**/**'
-        }
-      ]),
-      new CleanWebpackPlugin(['dist'])
+      new CleanWebpackPlugin(['assets'])
     ]
   })
 };
