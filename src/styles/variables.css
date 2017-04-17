@@ -22,4 +22,16 @@
   @custom-media --medium only screen and (min-width: 48em); /* 768px*/
   @custom-media --large only screen and (min-width: 62em); /* 992px*/
   @custom-media --extra-large only screen and (min-width: 75em); /* 1200px*/
+
+  /** helpers */
+  --clearfix: {
+    &:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+  }
 }

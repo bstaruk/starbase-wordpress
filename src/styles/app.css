@@ -27,16 +27,8 @@ input, button, select {
 }
 
 #page {
+  @apply --clearfix;
   @media (--medium) {
     margin-bottom: 2em;
-  }
-
-  &:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
   }
 }

@@ -12,5 +12,18 @@
     & .widget-title {
       margin-bottom: 0;
     }
+
+    & .search-form {
+      @apply --clearfix;
+
+      & .search-field,
+      & .search-submit {
+        float: left;
+        padding: .25em .5em;
+      }
+      & .search-field {
+        margin-right: .25em;
+      }
+    }
   }
 }
