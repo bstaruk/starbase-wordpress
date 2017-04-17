@@ -2,8 +2,9 @@
 require('./styles/app.css');
 
 // css components
-require('./components/masthead/masthead.css');
-require('./components/colophon/colophon.css');
+require('./styles/components/masthead.css');
+require('./styles/components/colophon.css');
+require('./styles/components/secondary.css');
 
 // js components
 const Button = require('./components/button/Button');
