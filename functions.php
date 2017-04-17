@@ -1,6 +1,6 @@
 <?php
 /**
- * starbase functions and definitions.
+ * starbase functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -44,7 +44,7 @@ function starbase_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'starbase' ),
+		'menu-1' => esc_html__( 'Primary', 'starbase' ),
 	) );
 
 	/*
@@ -59,6 +59,14 @@ function starbase_setup() {
 		'caption',
 	) );
 
+	// Set up the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( 'starbase_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
+
+	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
 add_action( 'after_setup_theme', 'starbase_setup' );
@@ -84,7 +92,7 @@ function starbase_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'starbase' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
+		'description'   => esc_html__( 'Add widgets here.', 'starbase' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -97,10 +105,22 @@ add_action( 'widgets_init', 'starbase_widgets_init' );
  * Enqueue scripts and styles.
  */
 function starbase_scripts() {
-	wp_enqueue_style( 'starbase-style', get_template_directory_uri() . '/dist/style.min.css', array(), '1' );
-	wp_enqueue_script( 'starbase-js', get_template_directory_uri() . '/dist/app.min.js', array(), '1', true );
+	wp_enqueue_style( 'starbase-style', get_template_directory_uri() . '/dist/assets/app.bundle.css' );
+
+	wp_enqueue_script( 'starbase-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'starbase-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'starbase_scripts' );
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -111,3 +131,13 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
