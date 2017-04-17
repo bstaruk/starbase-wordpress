@@ -1,0 +1,10 @@
+@import '../variables.css';
+
+#primary {
+  margin-bottom: 2em;
+  @media (--medium) {
+    margin-bottom: 0;
+    float: left;
+    width: 60%;
+  }
+}

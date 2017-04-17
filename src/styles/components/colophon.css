@@ -1,7 +1,8 @@
 @import '../variables.css';
 
 #colophon {
+  border-top: 1px solid var(--border-color);
   font-style: italic;
   font-size: .9em;
-  color: #888;
+  color: #999;
 }

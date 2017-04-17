@@ -1,6 +1,8 @@
 /**
   NOTE: :root pseudo-classes are stripped from the compiled css, and this file is imported
   to almost every component's css, so do not put anything in this file outside of :root
+
+  USAGE: var(--body-font-color)
  */
 
 :root {
@@ -8,7 +10,7 @@
   --body-bg-color: #fefefe;
   --body-font-color: #333;
   --anchor-font-color: #2475c1;
-  --border-color: #666;
+  --border-color: #ccc;
   --border-margin: 2rem;
 
   /** typography */

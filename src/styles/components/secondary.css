@@ -1,4 +1,13 @@
+@import '../variables.css';
+
 #secondary {
+  margin-bottom: 2em;
+  @media (--medium) {
+    margin-bottom: 0;
+    float: right;
+    width: 35%;
+  }
+
   & .widget {
     & .widget-title {
       margin-bottom: 0;
