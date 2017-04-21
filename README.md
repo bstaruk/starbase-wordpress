@@ -23,27 +23,18 @@ _Note: if you hate Yarn for some reason, you can skip Step 2 and use `npm instal
 ## building, watching & developing
 
 ### local development
-Starbase uses Webpack to watch the `/src` folder and rebuild the assets on save when changes are detected.
+Starbase uses Webpack to watch the `/src` folder and rebuild the assets (to `/assets`) when changes are detected.
 
-Run `npm run start` in the project root to begin the build & watch process. As you modify code in `/src`, the project will be recompiled and the contents of `/dist` will refresh.
+Run `npm run watch` in the project root to begin the build & watch process. As you modify code in `/src`, the project will be recompiled and the contents of `/assets` will refresh.
 
 ```
 cd /path/to/starbase
-npm run start
+npm run watch
 ```
 
-_Note: the contents of `/assets` will not be deleted during the build process. If you'd like to clean up the directory for any reason, just delete the entire `/assets` folder and rebuild it via `npm run start`._
+To run a one-time build without watching for changes, use `npm run build`.
 
-## features you may want to remove
-
-### build-time cleanup
-Starbase is setup to clear all contents of `/dist` (where compiled assets are piped into) during each `npm run build`. If you'd like to remove this part of the build process, perform the following steps:
-
-1. remove `CleanWebpackPlugin` from the plugins array in `/webpack/webpack.config.prod.js`
-2. remove `CleanWebpackPlugin` as a requirement at the top of `/webpack/webpack.config.prod.js`
-3. remove the `CleanWebpackPlugin` dependency from `/package.json`
-
-Removing the cleanup process means that deleted assets in `/src` will not be deleted in `/dist` until you manually do so. I recommend keeping the cleanup process intact unless you have a specific reason not to, such as having un-managed assets in `/dist`.
+_Note: the contents of `/assets` will not be deleted during the build process. If you'd like to clean up the directory for any reason, just delete the entire `/assets` folder and rebuild it via `npm run build`._
 
 ## features you may want to customize
 
