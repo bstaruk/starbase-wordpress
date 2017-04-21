@@ -5,11 +5,6 @@ const path = require('path');
 
 module.exports = function() {
   return webpackMerge(webpackConfigBase(), {
-    watch: true,
-    watchOptions: {
-        aggregateTimeout: 300,
-        poll: 1000
-    },
     output: {
       publicPath: './'
     },
