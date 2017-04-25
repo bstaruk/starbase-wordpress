@@ -3,10 +3,19 @@ Theme Name: starbase
 Theme URI: http://underscores.me/
 Author: Brian Staruk
 Author URI: http://brian.staruk.me
-Description: Simple, sassy and fun!
+Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: LICENSE
 Text Domain: starbase
-Tags: base, starter, bare
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+starbase is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */

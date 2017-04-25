@@ -1,0 +1,17 @@
+@import '../variables.css';
+
+#masthead {
+  font-family: var(--font-serif);
+  & img {
+    float: left;
+    margin-right: .5em;
+    max-height: 2.5em;
+  }
+  & h1 {
+    margin-top: 0;
+    & > a {
+      color: var(--body-font-color);
+      text-decoration: none;
+    }
+  }
+}
