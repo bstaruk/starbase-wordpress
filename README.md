@@ -1,10 +1,10 @@
 # wordpress-starbase
-Starbase for WordPress is a starter/dev theme that is based on [_s](http://underscores.me), but modified to ditch jQuery & CSS and instead use a build system that encompasses Webpack 2, ES6 & PostCSS along with some of the juiciest open source tools around such as:
+Starbase for WordPress is a starter/dev theme that is based on [_s](http://underscores.me), but modified to ditch jQuery & CSS and instead use a build system that encompasses Webpack 3, ES6 & PostCSS (with linting) along with some of the juiciest open source tools around such as:
 
 * [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)
-* [Webpack 2](https://github.com/webpack/webpack)
-* [Babel](https://github.com/babel/babel) (ES6) transpiling w/ linting by [ESLint](https://github.com/eslint/eslint)
-* [PostCSS](https://github.com/postcss/postcss) w/ [cssnext](https://github.com/MoOx/postcss-cssnext)
+* [Webpack 3](https://github.com/webpack/webpack)
+* [Babel](https://github.com/babel/babel) (ES6) w/ [ESLint](https://github.com/eslint/eslint)
+* [PostCSS](https://github.com/postcss/postcss) w/ [cssnext](https://github.com/MoOx/postcss-cssnext), [stylelint](https://github.com/stylelint/stylelint), [cssnano](https://github.com/ben-eb/cssnano) & [MQPacker](https://github.com/hail2u/node-css-mqpacker)
 * ...and more!
 
 ## license
@@ -38,6 +38,6 @@ _Note: the contents of `/assets` will not be deleted during the build process. I
 
 ## features you may want to customize
 
-### javascript linting
+### javascript & css linting
 
-Starbase uses [ESLint](http://eslint.org/) for Javascript (ES6) linting. The config (`/.eslintrc`) included out of the box is very basic and does not contain many rules. I recommend modifying this to your liking. Check out [the official docs](http://eslint.org/docs/2.0.0/rules/) for more information.
+Starbase uses [ESLint](http://eslint.org/) for Javascript (ES6) linting and [stylelint](https://github.com/stylelint/stylelint) for CSS linting. The configs (`/.eslintrc` and `/.stylelintrc` respectively) included out of the box contain some basic common rules. Modify them to your liking to encourage consistent code throughout your project.

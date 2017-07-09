@@ -18,7 +18,9 @@ a {
   transition: color 0.3s ease;
 }
 
-input, button, select {
+input,
+button,
+select {
   font-family: var(--font-sans);
 }
 
@@ -33,19 +35,47 @@ hr {
 }
 
 #page {
-  @apply --clearfix;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   @media (--medium) {
     margin-bottom: 2em;
   }
 }
 
 /* Headers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
 }
-h1 { font-size: 2em; }
-h2 { font-size: 1.7em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.3em; }
-h5 { font-size: 1.1em; }
-h6 { font-size: 1em; }
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
+}

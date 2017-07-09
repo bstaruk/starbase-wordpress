@@ -22,6 +22,8 @@ module.exports = function() {
                   plugins: function () {
                     return [
                       require('postcss-import'),
+                      require('stylelint')(),
+                      require('postcss-reporter')(),
                       require('postcss-cssnext'),
                       require('postcss-remove-root'),
                       require('css-mqpacker')({

@@ -2,6 +2,7 @@
 
 #secondary {
   margin-bottom: 2em;
+
   @media (--medium) {
     margin-bottom: 0;
     float: right;
@@ -14,15 +15,20 @@
     }
 
     & .search-form {
-      @apply --clearfix;
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
       & .search-field,
       & .search-submit {
         float: left;
-        padding: .25em .5em;
+        padding: 0.25em 0.5em;
       }
+
       & .search-field {
-        margin-right: .25em;
+        margin-right: 0.25em;
       }
     }
   }
