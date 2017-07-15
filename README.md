@@ -1,10 +1,10 @@
-# wordpress-starbase
+# starbase-wordpress
 Starbase for WordPress is a starter/dev theme that is based on [_s](http://underscores.me), but modified to ditch jQuery & CSS and instead use a build system that encompasses Webpack 3, ES6 & PostCSS (with linting) along with some of the juiciest open source tools around such as:
 
 * [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)
 * [Webpack 3](https://github.com/webpack/webpack)
 * [Babel](https://github.com/babel/babel) (ES6) w/ [ESLint](https://github.com/eslint/eslint)
-* [PostCSS](https://github.com/postcss/postcss) w/ [cssnext](https://github.com/MoOx/postcss-cssnext), [stylelint](https://github.com/stylelint/stylelint), [cssnano](https://github.com/ben-eb/cssnano) & [MQPacker](https://github.com/hail2u/node-css-mqpacker)
+* [PostCSS](https://github.com/postcss/postcss) w/ [cssnext](https://github.com/MoOx/postcss-cssnext), [PostCSS Nested](https://github.com/postcss/postcss-nested), [stylelint](https://github.com/stylelint/stylelint), [cssnano](https://github.com/ben-eb/cssnano) & [MQPacker](https://github.com/hail2u/node-css-mqpacker)
 * ...and more!
 
 ## license

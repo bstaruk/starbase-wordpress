@@ -24,7 +24,14 @@ module.exports = function() {
                       require('postcss-import'),
                       require('stylelint')(),
                       require('postcss-reporter')(),
-                      require('postcss-cssnext'),
+                      require('postcss-cssnext')({
+                        features: {
+                          autoprefixer: {
+                            grid: false
+                          }
+                        }
+                      }),
+                      require('postcss-nested'),
                       require('postcss-remove-root'),
                       require('css-mqpacker')({
                         sort: true
