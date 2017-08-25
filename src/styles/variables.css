@@ -1,17 +1,11 @@
-/*
-  NOTE: :root pseudo-classes are stripped from the compiled css, and this file is imported
-  to almost every component's css, so do not put anything in this file outside of :root
-
-  USAGE: var(--body-font-color)
- */
+/* IMPORTANT: This file is for :root variables only. */
 
 :root {
   /* colors */
   --body-bg-color: #fefefe;
   --body-font-color: #333;
   --anchor-font-color: #2475c1;
-  --border-color: #ccc;
-  --border-margin: 2rem;
+  --border-color: #666;
 
   /* typography */
   --font-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;

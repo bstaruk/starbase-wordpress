@@ -1,7 +1,6 @@
 const webpackMerge = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const path = require('path');
 
 module.exports = function() {
   return webpackMerge(webpackConfigBase(), {

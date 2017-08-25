@@ -1,8 +1,9 @@
-// base styles
+// baseline styles
+require('./styles/fonts/fonts.css');
 require('./styles/app.css');
 
 // css components
-require.context('./styles/components/', true, /\.css$/);
+require.context('./components/', true, /\.css$/);
 
 // js components
 const Button = require('./components/button/Button');
