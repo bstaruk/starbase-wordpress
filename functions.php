@@ -93,9 +93,9 @@ add_action( 'widgets_init', 'starbase_widgets_init' );
  * Enqueue scripts and styles.
  */
 function starbase_scripts() {
-	wp_enqueue_style( 'starbase-style', get_template_directory_uri() . '/assets/app.bundle.css' );
+	wp_enqueue_style( 'starbase-style', get_template_directory_uri() . '/assets/app.css' );
 
-	wp_enqueue_script( 'starbase-js', get_template_directory_uri() . '/assets/app.bundle.js', array(), '20170420', true );
+	wp_enqueue_script( 'starbase-js', get_template_directory_uri() . '/assets/app.js', array(), '20170420', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

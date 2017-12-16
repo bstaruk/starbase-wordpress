@@ -1,19 +1,23 @@
-require('./button.css');
-
 class Button {
-  constructor() {
-    this.init();
+  constructor(props) {
+    if (props.el) {
+      this.el = props.el;
+      if (this.el) {
+        this.init();
+      }
+    }
   }
 
   init() {
-    const buttons = document.getElementsByClassName('button');
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener('click', function (e) {
-        e.preventDefault();
-        this.classList.toggle('button--hit');
-      });
-    }
+    const self = this.el;
+    let hitCounter = 0;
+    self.addEventListener('click', (e) => {
+      e.preventDefault();
+      hitCounter++;
+      self.title = `you hit me ${hitCounter} times!`;
+      self.classList.toggle('button__hit');
+    });
   }
 }
 
-module.exports = Button;
+export default Button;

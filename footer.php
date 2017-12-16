@@ -16,7 +16,7 @@
 
 <footer id="colophon" role="contentinfo">
   <div class="site-info">
-    <p>handmade with &hearts; by <a href="https://brian.staruk.me" target="_blank">brian staruk</a></p>
+    <p>by <a href="https://brian.staruk.me">brian staruk</a> | <a href="https://github.com/bstaruk/starbase-wordpress">check me out!</a></p>
   </div><!-- .site-info -->
 </footer><!-- #colophon -->
 
